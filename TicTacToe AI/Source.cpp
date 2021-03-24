@@ -9,7 +9,7 @@ int main()
 	
 	while (CurrentGame->GameWon() == ' ') {
 
-		if (CurrentGame->GetPlayerTurn() == 'O') 
+		if (CurrentGame->GetPlayerTurn() == 'O')
 		{
 			MiniMaxAI OurAI(CurrentGame, 9, CurrentGame->GetPlayerTurn());
 			CurrentGame = new Board(OurAI.NextMove());
@@ -21,6 +21,7 @@ int main()
 			std::cin >> pos;
 		} while (!CurrentGame->IsValid(pos));
 		system("CLS");
+		
 	}
 
 	return 0;
