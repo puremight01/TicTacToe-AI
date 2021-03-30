@@ -11,6 +11,8 @@ int main()
 
 		if (CurrentGame->GetPlayerTurn() == 'O')
 		{
+			int MaxAlpha = -10;
+			int MinAlpha = 10;
 			MiniMaxAI OurAI(CurrentGame, 9, CurrentGame->GetPlayerTurn());
 			CurrentGame = new Board(OurAI.NextMove());
 		}

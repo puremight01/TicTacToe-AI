@@ -1,7 +1,9 @@
 #include "Node.h"
 
-Node::Node(Board *Input, char player)
+Node::Node(Board *Input, char player, int alpha, int beta)
 {
+	Alpha = alpha;
+	Beta = beta;
 	self = Input;
 	//loop through every character in the board code
 	for (std::string::size_type i = 0; i < self->AIStringOut().size(); i++)
