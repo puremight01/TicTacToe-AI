@@ -101,6 +101,21 @@ char Board::GetPlayerTurn()
 	return playerturn;
 }
 
+bool Board::BoardFull()
+{
+	for (int YPos = 0; YPos < 3; YPos++)
+	{
+		for (int XPos = 0; XPos < 3; XPos++)
+		{
+			if (board[XPos][YPos] == ' ')
+			{
+				return false;
+			}
+		}
+	}
+	return true;
+}
+
 void Board::PlacePiece(int pos)
 {
 	//place the piece

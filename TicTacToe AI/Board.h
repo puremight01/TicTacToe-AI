@@ -28,6 +28,10 @@ public:
 	//a way for the ai to get the current player turn 
 	char GetPlayerTurn();
 
+	// checks if the board if 
+	bool BoardFull();
+
+
 private:
 
 	//plays the piece into the square and changes player 
